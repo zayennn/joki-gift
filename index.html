@@ -315,7 +315,6 @@
                 const music = document.getElementById("bg-music");
                 music.play().catch(e => console.log("Autoplay blocked:", e));
 
-                // Show music control
                 document.getElementById('musicControl').style.display = 'flex';
 
                 confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
@@ -330,7 +329,6 @@
             function type() {
                 if (i < text.length) {
                     element.innerHTML += text.charAt(i);
-                    // Auto-scroll ke bawah
                     element.parentElement.scrollTop = element.parentElement.scrollHeight;
                     i++;
                     setTimeout(type, speed);
